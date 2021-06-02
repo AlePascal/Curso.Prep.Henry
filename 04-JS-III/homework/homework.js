@@ -289,7 +289,7 @@ function continueStatement(numero) {
     arrNum.push(total);
     }
   }
-  return arrNum
+  return arrNum 
 }
 
 // No modificar nada debajo de esta línea
