@@ -11,8 +11,8 @@ function deObjetoAmatriz(objeto){
     }) ➞ [["D", 1], ["B", 2], ["C", 3]]*/
   //Escribe tu código aquí
   
-  let elemento = [];
-  elemento = Object.keys(objeto);
+ 
+  elemento = Object.entries(objeto);
   
  return elemento
   
@@ -139,14 +139,26 @@ function sortArray(arr) {
   //La función recibe una matriz de strings. Ordena la matriz en orden creciente de longitudes de cadena
   //Ej: Recibe ---> ["You", "are", "beautiful", "looking"] || Devuelve ---> [“You", "are", "looking", "beautiful"]
   //Escribe tu código aquí
-  let palabra = "";
-  let num = 0;
-  let numcomp = 0;
-  for(i = 0; i < arr.length; i++){
-    palabra = arr[i];
-    num = arr.length;
+ // let palabra = "";
+ // let num = 0;
+  //let numcomp = 0;
+ // var nuevoarray = [];
+  //for(i = 0; i < arr.length; i++){
+   // if(palabra.length <= arr[i].length){
+    //  nuevoarray.push(arr[i]);
+      
+      
+  //  }else if(palabra.length >= arr[i].length){
+    //  nuevoarray.unshift(arr[i]);
+    //}
+    //palabra = arr[i];
+
+    arr.sort(function(a, b){return a.length - b.length});
     
-  }
+    return arr
+ // }
+  
+ // return nuevoarray
 }
 
 
@@ -156,6 +168,17 @@ function buscoInterseccion(arreglo1, arreglo2){
   //Si no tienen elementos en común, retornar un arreglo vacío.
   //Aclaración: los arreglos no necesariamente tienen la misma longitud
   //Escribe tu código aquí  
+  
+  var arreglonuevo = [];
+  for(let i = 0; i < arreglo1.length; i++){
+    for(let e = 0; e < arreglo2.length; e++){
+        if(arreglo1[i] === arreglo2[e]){
+          arreglonuevo.push(arreglo1[i]);
+        }
+
+    }
+  }
+  return arreglonuevo
 }
 
 
